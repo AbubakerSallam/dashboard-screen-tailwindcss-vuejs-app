@@ -1,7 +1,7 @@
 # Dashboard-ui-kit
 
 
-#see [Orginal Figma Design](https://www.figma.com/proto/D0wxHPnFMOwxGRYpTs9MrF/Dashboard-UI-Kit---Dashboard?page-id=0%3A1&type=design&node-id=549-8646&viewport=-106%2C-13%2C0.24&t=PuIWpZ3ARFDh7wKp-1&scaling=scale-down)
+#see [Orginal Figma Design](https://www.figma.com/design/eflshUGrf2VyeAnLIJul9K/Dashboard-UI-Kit---Dashboard--Free-Admin-Dashboard--Community-?node-id=549-8646&t=gTLZISyYYOvRPRWh-0)
 
 <img width="1342" height="617" alt="image" src="https://github.com/user-attachments/assets/7287a274-f954-4ab1-8e02-655fb5d3d426" />
 
