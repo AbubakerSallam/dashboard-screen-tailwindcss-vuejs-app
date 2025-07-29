@@ -1,0 +1,43 @@
+<template>
+  <!-- Backdrop for mobile only -->
+  <div
+    v-if="width < 640 && slidOpen"
+    class="fixed inset-0 z-40 bg-black/40"
+    @click.self="emit('update:slidOpen', false)"
+  ></div>
+
+  <!-- Sidebar -->
+  <div
+    v-show="width >= 640 || slidOpen"
+    class="z-50 fixed sm:static top-0 left-0 h-full w-[240px] sm:w-[192px]
+           p-4 bg-white dark:bg-[#2A2A2A] dark:text-slate-200 text-slate-900
+           border-r border-gray-400 transition-transform duration-300"
+    :class="{
+      'translate-x-0': width >= 640 || slidOpen,
+      '-translate-x-full': width < 640 && !slidOpen,
+    }"
+  >
+    <!-- Sidebar content -->
+    <div class="inline-flex my-2">
+      <div class="ring-1 ring-slate-400 rounded-4xl items-center mr-1">
+        <Icon icon="fluent-emoji-high-contrast:person" width="22" height="22" />
+      </div>
+      <span class="text-[16px]">Abubaker Sallam</span>
+    </div>
+
+    <div class="group inline-flex mb-4">
+      <div class="flex group-hover:flex-col transition gap-2">
+        <span class="hover:bg-slate-200 dark:hover:bg-slate-700 rounded-md p-1">Favorites</span>
+        <span class="hover:bg-gray-200 dark:hover:bg-slate-700 rounded-md p-1">Recently</span>
+      </div>
+    </div>
+
+    <CircleMenue />
+    <CircleMenue>Projects.</CircleMenue>
+
+    <!-- MenueAndItems sections -->
+    <MenueAndItems ... />
+    <MenueAndItems ... />
+  </div>
+</template>
+<SlideBar :slidOpen="slidOpen" @update:slidOpen="slidOpen = $event" />
