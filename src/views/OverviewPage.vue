@@ -1,4 +1,12 @@
 <template>
+  <div class="flex justify-between px-4">
+    <h1>OverView</h1>
+    <div class="flex items-center gap-0.5">
+      <h1>Today</h1>
+      <Icon icon="ep:arrow-down" width="13" height="13" />
+    </div>
+  </div>
+
   <div class="p-4 grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-4">
     <StatCard title="Views" value="7,265" change="+11.01%" />
     <StatCard title="Visits" value="3,671" change="-0.03%" />
@@ -9,20 +17,21 @@
     </div>
     <TrafficByWebsite />
 
-    <div class="col-span-2 md:col-span-3 lg:col-span-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div
+      class="col-span-2 md:col-span-3 lg:col-span-4 grid grid-cols-1 md:grid-cols-2 gap-4"
+    >
       <BarChart />
       <DoughnutChart />
     </div>
-   
   </div>
 </template>
 
 <script setup>
-import BarChart from '@/components/charts/BarChart.vue';
-import DoughnutChart from '@/components/charts/DoughnutChart.vue';
-import LineChart from '@/components/charts/LineChart.vue';
-import TrafficByWebsite from '@/components/charts/TrafficByWebsite.vue';
-import StatCard from '@/components/StatCard.vue';
-
-
+import BarChart from "@/components/charts/BarChart.vue";
+import DoughnutChart from "@/components/charts/DoughnutChart.vue";
+import { Icon } from "@iconify/vue";
+import LineChart from "@/components/charts/LineChart.vue";
+import TrafficByWebsite from "@/components/charts/TrafficByWebsite.vue";
+import IconHolder from "@/components/IconHolder.vue";
+import StatCard from "@/components/StatCard.vue";
 </script>

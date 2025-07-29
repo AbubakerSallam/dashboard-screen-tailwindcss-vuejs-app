@@ -33,7 +33,7 @@ function toggle(localIndex) {
 </script>
 <template>
   <div class="mt-1 text-[16px]" @click="isOpened = !isOpened">
-    <span class="text-gray-400">
+    <span class="text-gray-400 text-sm">
       {{ label }}
     </span>
   </div>
