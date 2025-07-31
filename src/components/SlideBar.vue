@@ -24,6 +24,7 @@ function handleSelection(payload) {
 const emit = defineEmits(["update:slidOpen", "update:selectedLabels"]);
 
 const { width } = useWindowSize();
+const isHovered = ref(false);
 const dashboardOptions = [
   {
     label: "OverView",
@@ -123,8 +124,32 @@ const ProfileOptions = [
       </div>
       <span class="text-[16px]">Abubaker Sallam</span>
     </div>
+    <div
+      class="inline-flex group"
+      @mouseenter="isHovered = true"
+      @mouseleave="isHovered = false"
+    >
+      <div
+        class="flex gap-x-2 transition-all duration-500 delay-200 text-gray-400"
+        :class="{ 'flex-col': isHovered, 'flex-row': !isHovered }"
+      >
+        <div>
+          <span
+            class="hover:rounded-md hover:px-2 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-500"
+          >
+            Favorites
+          </span>
+          <div v-if="isHovered" class="inline-flex px-7 py-2"></div>
+        </div>
+        <span
+          class="hover:rounded-md hover:px-2 hover:bg-gray-200 dark:hover:bg-slate-700 dark:text-slate-600 text-slate-300 transition-all duration-500"
+        >
+          Recently
+        </span>
+      </div>
+    </div>
 
-    <div class="group inline-flex">
+    <!-- <div class="group inline-flex">
       <div
         class="flex group-hover:flex-col transition gap-2 delay-500 duration-1000 text-gray-400"
       >
@@ -137,7 +162,7 @@ const ProfileOptions = [
           >Recently</span
         >
       </div>
-    </div>
+    </div> -->
     <CircleMenue />
     <CircleMenue>Projects.</CircleMenue>
     <MenueAndItems
