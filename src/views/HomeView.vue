@@ -4,7 +4,7 @@ import AppBar from "@/components/AppBar.vue";
 import SlideBar from "../components/SlideBar.vue";
 import RightSlide from "@/components/RightSlide.vue";
 
-const slidOpen = ref(true);
+const slidOpen = ref(false);
 const toggleSlideOpenClose = () => {
   slidOpen.value = !slidOpen.value;
 };
@@ -19,25 +19,25 @@ const updateSelectedLabels = (payload) => {
 </script>
 
 <template>
-  <div class="min-h-screen m-0 p-0 flex text-[14px]">
+  <div class="min-h-screen max-w-full m-0 p-0 flex text-[14px]">
     <SlideBar
       :slidOpen="slidOpen"
       @update:slidOpen="slidOpen = $event"
       @update:selectedLabels="updateSelectedLabels"
     />
-    <div class="flex flex-col flex-grow min-w-0 max-w-[913px]">
+    <div class="flex flex-col w-full max-w-[830px] min-w-0 ">
       <AppBar
-        class="shrink-0 overflow-auto"
+        class="shrink-0 overflow-x-visible"
         @toggle-slide="toggleSlideOpenClose"
         :selected-parent="selectedLabels.parentLabel"
-        :selected-child="selectedLabels.childLabel"
-      />
-      <div class="p-4 flex-grow overflow-auto">
-        <router-view />
-      </div>
+:selected-child="selectedLabels.childLabel"
+/>
+<div class="p-4 flex-grow ">
+<router-view />
+</div>
     </div>
 
-    <div class="max-w-[100px] shrink-0">
+    <div class="w-10  ">
       <RightSlide />
     </div>
   </div>

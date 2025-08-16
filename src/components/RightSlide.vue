@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex-initial border-l border-l-gray-400 pl-2 min-h-screen hidden sm:block"
+    class=" border-l border-l-gray-400 pl-2 min-h-screen hidden sm:block"
   >
     <div class="m-3 rounded-lg font-semibold">Notification</div>
 

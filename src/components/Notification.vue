@@ -8,15 +8,15 @@
                 class="absolute left-1/2 -bottom-6 h-[90%] w-px bg-gray-300 transform -translate-x-1/2">
             </div>
         </div>
-        <div class="flex flex-col max-w-50 ml-1 ">
-            <span class="text-sm font-medium truncate  ">
-                {{ card.title }}
-            </span>
-            <span class="text-xs text-gray-500 truncate">
-                {{ card.subtitle }}
-            </span>
-        </div>
-    </div>
+<div class="flex flex-col max-w-50 ml-1 ">
+    <span class="text-sm font-medium truncate  ">
+        {{ card.title }}
+    </span>
+    <span class="text-xs text-gray-500 truncate">
+        {{ card.subtitle }}
+    </span>
+</div>
+</div>
 </template>
 
 <script setup>
